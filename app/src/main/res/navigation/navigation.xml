@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/splashFragment">
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.snowballs.gloryroad.fragment.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_searchFragment"
+            app:destination="@id/searchFragment"
+            app:launchSingleTop="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.snowballs.gloryroad.fragment.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_searchFragment_to_chooseFragment"
+            app:destination="@id/chooseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chooseFragment"
+        android:name="com.snowballs.gloryroad.fragment.ChooseFragment"
+        android:label="fragment_choose"
+        tools:layout="@layout/fragment_choose" >
+        <argument
+            android:name="firstName"
+            app:argType="string" />
+        <argument android:name="middleName"
+            app:argType="string" />
+        <argument
+            android:name="lastName"
+            app:argType="string" />
+        <argument
+            android:name="birthDate"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_chooseFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_chooseFragment_to_photoFragment"
+            app:destination="@id/photoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/showFragment"
+        android:name="com.snowballs.gloryroad.fragment.ShowFragment"
+        android:label="fragment_show"
+        tools:layout="@layout/fragment_show" >
+        <action
+            android:id="@+id/action_showFragment_to_colorizeFragment"
+            app:destination="@id/colorizeFragment" />
+        <action
+            android:id="@+id/action_showFragment_to_postFragment"
+            app:destination="@id/postFragment" />
+        <action
+            android:id="@+id/action_showFragment_to_photoFragment"
+            app:destination="@id/photoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/colorizeFragment"
+        android:name="com.snowballs.gloryroad.fragment.ColorizeFragment"
+        android:label="fragment_colorize"
+        tools:layout="@layout/fragment_colorize" >
+        <action
+            android:id="@+id/action_colorizeFragment_to_postFragment"
+            app:destination="@id/postFragment" />
+        <action
+            android:id="@+id/action_colorizeFragment_to_showFragment"
+            app:destination="@id/showFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/postFragment"
+        android:name="com.snowballs.gloryroad.fragment.PostFragment"
+        android:label="fragment_post"
+        tools:layout="@layout/fragment_post" >
+        <action
+            android:id="@+id/action_postFragment_to_showFragment"
+            app:destination="@id/showFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/photoFragment"
+        android:name="com.snowballs.gloryroad.fragment.PhotoFragment"
+        android:label="fragment_photo"
+        tools:layout="@layout/fragment_photo" >
+        <action
+            android:id="@+id/action_photoFragment_to_chooseFragment"
+            app:destination="@id/chooseFragment" />
+        <action
+            android:id="@+id/action_photoFragment_to_showFragment"
+            app:destination="@id/showFragment" />
+    </fragment>
+</navigation>
