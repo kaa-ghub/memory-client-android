@@ -6,4 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".fragment.ShowFragment">
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:text='Статья, наполненная офигенским драматизмом, преисполненная гордости и плохо скрываемыми призывами к загрузке фото на сайт "Память народа" (https://foto.pamyat-naroda.ru/).  +Кнопочки для постинга в соц.сетях.'
+        android:textSize="18sp" />
 </RelativeLayout>
